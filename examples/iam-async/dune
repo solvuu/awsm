@@ -1,0 +1,5 @@
+(executable
+ (name awsm_iam)
+ (libraries awsm-iam-async core_unix.command_unix)
+ (flags
+  (:standard -open Core -open Async)))

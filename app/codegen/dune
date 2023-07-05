@@ -1,0 +1,6 @@
+(executable
+ (name awsm_codegen)
+ (public_name awsm-codegen)
+ (package awsm-codegen)
+ (libraries awsm-codegen core core_unix.command_unix)
+ (flags :standard -open Core))

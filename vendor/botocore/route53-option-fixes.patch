@@ -1,0 +1,28 @@
+diff --git a/vendor/botocore/botocore/data/route53/2013-04-01/service-2.json b/vendor/botocore/botocore/data/route53/2013-04-01/service-2.json
+index 37747203..a5bc7ab9 100644
+--- a/vendor/botocore/botocore/data/route53/2013-04-01/service-2.json
++++ b/vendor/botocore/botocore/data/route53/2013-04-01/service-2.json
+@@ -3734,7 +3734,6 @@
+       "type":"structure",
+       "required":[
+         "HealthChecks",
+-        "Marker",
+         "IsTruncated",
+         "MaxItems"
+       ],
+@@ -3908,7 +3907,6 @@
+       "type":"structure",
+       "required":[
+         "HostedZones",
+-        "Marker",
+         "IsTruncated",
+         "MaxItems"
+       ],
+@@ -4066,7 +4064,6 @@
+       "type":"structure",
+       "required":[
+         "DelegationSets",
+-        "Marker",
+         "IsTruncated",
+         "MaxItems"
+       ],

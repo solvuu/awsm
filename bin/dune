@@ -1,0 +1,6 @@
+(executable
+ (name awsm_build)
+ (libraries core core_unix core_unix.command_unix core_unix.sys_unix unix)
+ (flags :standard -open Core)
+ (preprocess
+  (pps ppx_jane)))

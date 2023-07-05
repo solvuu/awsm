@@ -1,0 +1,10 @@
+(test
+ (name test_auth)
+ (libraries awsm)
+ (flags
+  (:standard -open Core -open Printf))
+ (deps
+  (glob_files %{project_root}/vendor/aws4_testsuite/*.req)
+  (glob_files %{project_root}/vendor/aws4_testsuite/*.creq))
+ (action
+  (run %{test} %{project_root}/vendor/aws4_testsuite/)))

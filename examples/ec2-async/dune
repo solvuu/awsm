@@ -1,0 +1,5 @@
+(executable
+ (name awsm_ec2)
+ (libraries awsm-ec2-async core_unix.command_unix)
+ (flags
+  (:standard -open Core -open Async)))

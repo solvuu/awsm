@@ -1,0 +1,7 @@
+(executable
+ (name awsm_athena)
+ (libraries awsm-athena-async core_unix.command_unix)
+ (preprocess
+  (pps ppx_jane))
+ (flags
+  (:standard -open Core -open Async)))

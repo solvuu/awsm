@@ -1,0 +1,14 @@
+(executable
+ (name awsm_test)
+ (libraries
+  awsm-s3-async
+  awsm-ec2-async
+  awsm-ecr-async
+  awsm-ecs-async
+  awsm-sso-async
+  core_unix.filename_unix
+  core_unix.command_unix)
+ (flags
+  (:standard -open Core -open Async))
+ (preprocess
+  (pps ppx_jane)))

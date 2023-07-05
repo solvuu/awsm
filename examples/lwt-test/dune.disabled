@@ -1,0 +1,8 @@
+(executable
+ (name awsm_test_lwt)
+ (libraries awsm-s3-lwt awsm-ec2-lwt awsm-ecr-lwt awsm-ecs-lwt awsm-sso-lwt
+   core_unix.filename_unix core_unix.command_unix)
+ (flags
+  (:standard -open Core -open Lwt))
+ (preprocess
+  (pps ppx_jane)))

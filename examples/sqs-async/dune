@@ -1,0 +1,7 @@
+(executable
+ (name awsm_sqs)
+ (libraries awsm-sqs-async core_unix.time_unix)
+ (preprocess
+  (pps ppx_jane))
+ (flags
+  (:standard -open Core -open Async)))

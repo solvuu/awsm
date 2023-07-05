@@ -1,0 +1,80 @@
+[OK] aws testsuite
+name: get-header-key-duplicate
+[FIXME] aws testsuite
+name: get-header-value-multiline
+skipped: true
+reason: test is not supported yet, see comment at top of test/test_auth.ml
+[OK] aws testsuite
+name: get-header-value-order
+[FIXME] aws testsuite
+name: get-header-value-trim
+skipped: true
+reason: test is not supported yet, see comment at top of test/test_auth.ml
+[OK] aws testsuite
+name: get-relative-relative
+[OK] aws testsuite
+name: get-relative
+[OK] aws testsuite
+name: get-slash-dot-slash
+[OK] aws testsuite
+name: get-slash-pointless-dot
+[OK] aws testsuite
+name: get-slash
+[OK] aws testsuite
+name: get-slashes
+[OK] aws testsuite
+name: get-space
+[OK] aws testsuite
+name: get-unreserved
+[OK] aws testsuite
+name: get-utf8
+[OK] aws testsuite
+name: get-vanilla-empty-query-key
+[FIXME] aws testsuite
+name: get-vanilla-query-order-encoded
+skipped: true
+reason: test is not supported yet, see comment at top of test/test_auth.ml
+[OK] aws testsuite
+name: get-vanilla-query-order-key-case
+[OK] aws testsuite
+name: get-vanilla-query-order-key
+[OK] aws testsuite
+name: get-vanilla-query-order-value
+[OK] aws testsuite
+name: get-vanilla-query-unreserved
+[OK] aws testsuite
+name: get-vanilla-query
+[OK] aws testsuite
+name: get-vanilla-ut8-query
+[OK] aws testsuite
+name: get-vanilla-utf8-query
+[FIXME] aws testsuite
+name: get-vanilla-with-session-token
+skipped: true
+reason: test is not supported yet, see comment at top of test/test_auth.ml
+[OK] aws testsuite
+name: get-vanilla
+[OK] aws testsuite
+name: post-header-key-case
+[OK] aws testsuite
+name: post-header-key-sort
+[OK] aws testsuite
+name: post-header-value-case
+[OK] aws testsuite
+name: post-vanilla-empty-query-value
+[FIXME] aws testsuite
+name: post-vanilla-query-nonunreserved
+skipped: true
+reason: test is not supported yet, see comment at top of test/test_auth.ml
+[FIXME] aws testsuite
+name: post-vanilla-query-space
+skipped: true
+reason: test is not supported yet, see comment at top of test/test_auth.ml
+[OK] aws testsuite
+name: post-vanilla-query
+[OK] aws testsuite
+name: post-vanilla
+[OK] aws testsuite
+name: post-x-www-form-urlencoded-parameters
+[OK] aws testsuite
+name: post-x-www-form-urlencoded

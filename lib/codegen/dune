@@ -1,0 +1,32 @@
+(library
+ (name awsm_codegen)
+ (public_name awsm-codegen)
+ (libraries
+  core
+  core_unix
+  core_unix.filename_unix
+  core_unix.sys_unix
+  yojson
+  xmlm
+  ocamlgraph
+  ppxlib
+  ppxlib.ast
+  ppxlib.astlib
+  sedlex
+  re.pcre
+  uri-sexp)
+ (flags :standard -open Ppxlib)
+ (inline_tests)
+ (preprocess
+  (pps ppx_jane sedlex.ppx ppxlib.metaquot)))
+
+(rule
+ (targets service.ml service.mli)
+ (deps
+  (source_tree %{project_root}/vendor/botocore/botocore/data))
+ (action
+  (run
+   %{project_root}/bin/awsm_build.exe
+   build-service-module
+   --botocore-data
+   %{project_root}/vendor/botocore/botocore/data)))

@@ -1,0 +1,5 @@
+(executable
+ (name main)
+ (libraries awsm-cognito-idp-async core_unix.command_unix)
+ (flags
+  (:standard -open Core -open Async)))

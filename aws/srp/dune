@@ -1,0 +1,10 @@
+(library
+ (name awsm_srp)
+ (public_name awsm-srp)
+ (libraries awsm zarith)
+ (flags :standard -open Core -open Printf)
+ (ocamlopt_flags (-linscan))
+ (preprocess
+  (pps ppx_jane))
+ (synopsis "OCaml AWS SRP API.")
+ (inline_tests))

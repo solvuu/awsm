@@ -1,0 +1,5 @@
+(executable
+ (name awsm_ebs)
+ (libraries awsm-ebs-async core_unix.command_unix core_unix.time_unix)
+ (flags
+  (:standard -open Core -open Async)))

@@ -1,0 +1,10 @@
+(library
+ (name awsm_srp_async)
+ (flags
+  (:standard -open Core -open Async))
+ (public_name awsm-srp-async)
+ (libraries awsm-srp awsm-async awsm-cognito-idp-async core_unix.time_unix)
+ (preprocess
+  (pps ppx_jane))
+ (synopsis "OCaml AWS SRP client.")
+ (inline_tests))

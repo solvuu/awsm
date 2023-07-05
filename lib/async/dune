@@ -1,0 +1,10 @@
+(library
+ (name awsm_async)
+ (flags
+  (:standard -open Core -open Async))
+ (public_name awsm-async)
+ (libraries awsm cohttp-async core_unix.filename_unix)
+ (preprocess
+  (pps ppx_jane))
+ (synopsis "OCaml async library for AWS clients.")
+ (inline_tests))

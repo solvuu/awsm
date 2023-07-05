@@ -1,0 +1,18 @@
+(library
+ (name awsm)
+ (public_name awsm)
+ (libraries awsm-codegen base64 cohttp core cryptokit xmlm re.perl)
+ (flags :standard -open Core -open Printf)
+ (ocamlopt_flags (-linscan))
+ (preprocess
+  (pps ppx_jane))
+ (synopsis "OCaml AWS general API.")
+ (inline_tests))
+
+(rule
+ (deps
+  (:endpoints %{project_root}/vendor/botocore/botocore/data/endpoints.json))
+ (action
+  (with-stdout-to
+   botocore_endpoints.ml
+   (run %{bin:awsm-codegen} botocore-endpoints --endpoints %{endpoints}))))

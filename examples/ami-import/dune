@@ -1,0 +1,7 @@
+(executable
+ (name ami_import)
+ (libraries awsm-ebs-async awsm-ec2-async core_unix.command_unix)
+ (flags
+  (:standard -open Core -open Async))
+ (preprocess
+  (pps ppx_jane)))

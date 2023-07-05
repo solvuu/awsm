@@ -1,0 +1,5 @@
+(executable
+ (name awsm_route53)
+ (libraries awsm-route53-async core_unix.command_unix)
+ (flags
+  (:standard -open Core -open Async)))

@@ -1,0 +1,54 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ocaml/opam2:ubuntu-18.04-ocaml-4.06
+        environment:
+          TERM: xterm
+    steps:
+      - run:
+          name: Install apt deps
+          command: |
+            sudo apt-get update
+      - run:
+          name: Update opam
+          command: |
+            # This Docker container comes with a local opam repo, which we need
+            # to replace with the main remote repo in order to do an update
+            # Note: `remote add` implies `update`
+            opam remote remove default --all
+            opam remote add default https://opam.ocaml.org
+      - checkout
+      # We can't use wildcards in {{ checksum }} so generate a single file
+      # whose checksum will change if any of the .opam files change
+      - run:
+          name: Checksum opam files
+          command: shasum *.opam > checksums
+      - restore_cache:
+          keys:
+            - opam-v1-{{ arch }}-{{ checksum "checksums" }}
+      - run:
+          name: Pin opam dependencies
+          command: opam pin add -yn .
+      - run:
+          name: Install system dependencies
+          command: opam depext -y $(basename -a -s .opam *.opam)
+      - run:
+          name: Install opam dependencies
+          command: opam install -y .
+      - run:
+          name: Install ocamlformat
+          command: opam install ocamlformat
+      - save_cache:
+          key: opam-v1-{{ arch }}-{{ checksum "checksums" }}
+          paths:
+            - ~/.opam
+      - run:
+          name: Build
+          command: opam config exec -- make build
+      - run:
+          name: Test
+          command: opam config exec -- make test
+      - run:
+          name: Check formatting
+          command: opam config exec -- make fmt

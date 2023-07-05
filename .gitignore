@@ -1,0 +1,8 @@
+/_build
+/_opam
+/*.install
+.merlin
+/tmp
+*~
+.DS_Store
+/Dockerfile.*

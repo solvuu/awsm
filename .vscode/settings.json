@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "*.opam": true
+  }
+  "ocaml.sandbox": {
+    "kind": "opam",
+    "switch": "${workspaceFolder:awsm}"
+  }
+}
