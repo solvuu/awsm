@@ -108,7 +108,7 @@ Then run `make doc`.
 
 ## License
 
-Awsm is released under the [ISC license](./LICENSE).
+Awsm is released under the [MIT license](./LICENSE.md).
 
 
 ## How to contribute
